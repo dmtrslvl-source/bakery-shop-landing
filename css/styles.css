@@ -47,6 +47,8 @@ body{
 
 /* Base */
 ul{
+    margin: 0px;
+    padding: 0px;
     list-style-type: none;
 }
 
@@ -86,11 +88,10 @@ h1, h2, h3, h4, h5, p {
 .button {
     background-color:var(--color-brand-light);
     color: var(--color-primary-white);
-    border-color: var(--color-brand-dark);
-    border: 2px solid;
     border-radius: 8px;
     cursor: pointer;
     padding: 16px 32px;
+    border: 2px solid var(--color-brand-dark);
 }
 
 .button:hover {
@@ -108,10 +109,29 @@ h1, h2, h3, h4, h5, p {
 
 .link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
 }
 
 
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center ;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    gap: 64px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
 
 /* Hero section */
 .hero-section{
@@ -128,11 +148,6 @@ h1, h2, h3, h4, h5, p {
     color: var(--color-brand-light);
 }
 
-.advantages-item {
-    font-weight: 300;
-    font-size: 20px;
-}
-
 .section-title {
     font-size: 64px;
     font-weight: 900;
@@ -143,19 +158,35 @@ h1, h2, h3, h4, h5, p {
     color: var(--color-brand-dark);
 }
 
+/* advantages-section */
+.advantages-section {
+    padding: 16px 0;
+    background-color: var(--color-brand-light);
+}
+
+.advantages-item {
+    color: var(--color-primary-white);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
 
 
-/* tradidiot section */
+
+
+
+/* traditiot section */
 .traditions-section {
     padding-top: 96px;
 }
 
 .traditions-title {
     margin-bottom: 42px;
-}
-.advantages-list{
-    color: var(--color-primary-white);
-    background-color: var(--color-brand-light);
 }
 
 .tradition-text .brand {
@@ -166,6 +197,21 @@ h1, h2, h3, h4, h5, p {
 .tradition-text .uppercase {
     text-transform: uppercase;
 }
+
+.tradition-text.limited {
+    max-width: 340px;
+}
+
+.tradition-container {
+    gap: 40px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.tradition-content {
+    max-width: 710px;
+}
+
 
 
 
@@ -198,6 +244,19 @@ h1, h2, h3, h4, h5, p {
     font-size: 14px;
 }
 
+.format-list {
+    display: flex;
+    gap: 20px;
+}
+
+.format-item{
+    flex-basis: calc((100% - 40px) / 3);
+    flex-wrap: wrap;
+}
+
+.format-card {
+    padding: 24px;
+}
 
 
 /* contact section */
