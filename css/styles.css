@@ -59,12 +59,18 @@ address {
     font-style: normal;
 }
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, p {
     margin-top: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 .section {
@@ -149,7 +155,7 @@ h1, h2, h3, h4, h5, p {
     text-align: center;
     color: var(--color-primary-white);
     font-size: 128px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .hero-title .accent {
@@ -158,7 +164,7 @@ h1, h2, h3, h4, h5, p {
 
 .section-title {
     font-size: 64px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -227,28 +233,50 @@ h1, h2, h3, h4, h5, p {
 
 
 
-/* chief setion */
-.chiefs-title{
+/* chef seсtion */
+.chefs-title{
     width: 620px;
     margin:0 auto 80px;
 }
 
-.chiefs-title::after,
-.chiefs-title::before {
+.chef-text p {
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
+
+.chefs-title::after,
+.chefs-title::before {
     display: block;
     width: 352px;
     border: 2px solid var(--color-brand-light);
     content: '';
 }
 
-.chief-title {
+.chef-title {
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 40px;
     line-height: 1.3;
 }
 
-.chief-photo {
+.chef-list {
+    display: flex;
+    gap: 30px;
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
+.chef-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-photo {
     height: 390px;
     width: 241px;
     border-radius: 4px 4px 4px 200px;
@@ -259,6 +287,12 @@ h1, h2, h3, h4, h5, p {
 
 
 /* format section */
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .formats-title {
     margin-bottom: 80px;
 }
@@ -297,6 +331,7 @@ h1, h2, h3, h4, h5, p {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
@@ -313,17 +348,56 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* contact section */
+.contact-section {
+    padding-bottom: 96px;
+}
+
 .contact-title {
     margin-bottom: 16px;
 }
 
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
+
+
 
 /* footer */
+.footer {
+    padding: 32px 0px;
+}
+
 .address-link {
     color: var(--color-primary-white);
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav, .footer-adress {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.footer-menu,
+.footer-logo {
+    flex-grow: 1;
+}
+
+.address-info,
+.address-list {
+    flex-grow: 1;
 }
 
 .address-link:hover {
