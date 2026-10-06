@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./scss/main.min.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <nav class="header-nav">
@@ -70,7 +70,7 @@
       <section class="section" id="chef-section">
         <div class="container">
           <h2 class="chefs-title section-title centered">
-            Наші найкращі<span class="accent"> шеф-кухарі</span>
+            Наші найкращі <br /><span class="accent"> шеф-кухарі</span>
           </h2>
           <ul class="chef-list">
             <li class="chef-item">
@@ -132,6 +132,11 @@
             <ul class="format-list">
               <li class="format-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/walrus-format.jpeg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-title" lang="en">Walrus</h3>
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
@@ -146,6 +151,11 @@
               </li>
               <li class="format-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Horseshoe-format.jpeg"
+                    alt="Horseshoe format"
+                  />
                   <h3 class="format-title" lang="en">Horseshoe</h3>
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
@@ -157,6 +167,11 @@
               </li>
               <li class="format-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Handlebar-format.jpeg"
+                    alt="Handlebar format"
+                  />
                   <h3 class="format-title" lang="en">Handlebar</h3>
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
@@ -167,7 +182,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button">
+            <button class="carousel-button next">
               <svg width="16" height="16">
                 <use href="./images/icon.svg#icon-arrow"></use>
               </svg>
