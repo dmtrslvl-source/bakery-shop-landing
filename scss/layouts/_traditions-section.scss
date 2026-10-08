@@ -1,0 +1,37 @@
+.traditions-section {
+    padding-top: 96px;
+
+    &__title {
+        margin-bottom: 42px;
+    }
+
+    &__container {
+        gap: 40px;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    &__content {
+        max-width: 710px;
+    }
+
+    &__text {
+        &--limited {
+            max-width: 340px;
+        }
+    }
+
+    // Арка намальована всередині самого baker-man.jpg (606x466),
+    // а зліва й справа у файлі чорні поля. Тому обрізаємо картинку
+    // до розміру арки і зрізаємо верхні кути радіусом.
+    &__image {
+        display: block;
+        width: 393px;
+        height: 466px;
+        border-radius: 400px 400px 0 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: 31% center;
+        object-position: 31% center;
+    }
+}

@@ -1,0 +1,28 @@
+.chef-card {
+    display: flex;
+    gap: 30px;
+
+    &__photo {
+        height: 390px;
+        width: 241px;
+        border-radius: 4px 4px 4px 200px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        box-shadow: -16px 16px 0 0 var(--color-primary-white), -16px 16px 0 2px var(--color-secondary-dark);
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    &__text {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
